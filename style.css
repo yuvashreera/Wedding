@@ -1,0 +1,438 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    height : 100vh;
+    width: 100vw;
+    display : grid;
+    justify-items : center;
+    background-image: url("rose_garden.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    margin : 15px;
+    width : 850px;
+    height : 700px;
+    border: 4px solid green;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+    display : flex;
+    flex-direction: column;
+    background-image: radial-gradient(skyblue, aliceblue, pink, green);
+}
+
+.container #shad{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Dancing Script", cursive;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.459);
+    color: darkgreen;
+}
+
+#shad{
+    color: black;
+    text-shadow: 0 0 10px white;
+}
+
+.container #shad i{
+    margin : 15px;
+    font-size: 50px;
+    color: darkcyan;
+}
+
+/* Heart Grabbing Animation */
+.container #shad .yAxisAnimate{
+    animation: HeartGrab 1.5s ease-in-out 0.5s infinite normal forwards;
+}
+
+@keyframes HeartGrab {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform-origin: bottom;
+        transform: scaleY(125%);
+    }
+    
+}
+
+.container .wedCon{
+    display: flex;
+    flex-direction: row;
+}
+
+.container .wedCon .piegons{
+    margin: 10px;
+    /* height: 320px;
+    width : 330px; */
+    background-image: url("piegons2-transformed.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+/* Shaking Piegons */
+.container .wedCon .piegons{
+    animation: ShakeOfPiegon 1.5s ease-in-out 0.5s infinite normal forwards;
+}
+
+@keyframes ShakeOfPiegon {
+    0%{
+        transform: skewX(0deg);
+    }
+
+    100%{
+        transform-origin: center;
+        transform: skewX(10deg);
+    }
+}
+
+.container .wedCon .name_container{
+    margin: 50px;
+    font-size: 70px;
+    font-family: "Great Vibes";
+    font-weight : 900;
+    color : green;
+    text-shadow: 0 0 10px red;
+    width : 500px;
+}
+
+.container .wedCon .name_container .nC1{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .wedCon .name_container .nC1 .qual{
+    font-size : 18px;
+    align-self: center;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* scaling */
+.container .wedCon .name_container .nC1 .name1,
+.container .wedCon .name_container .nC1 .name2{
+    animation: NameFix 1.5s ease-in-out 0.5s infinite normal forwards;
+}
+
+@keyframes NameFix {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scaleX(120%);
+    }
+    
+}
+
+.container .wedCon .name_container .mC{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    letter-spacing: 10px;
+}
+
+.container .sumCon{
+    margin : 15px;
+}
+
+.container .sumCon .sen1{
+    font-size : 22px;
+    font-style: oblique;
+    text-align: center;
+    color : darkgreen;
+    text-shadow: 0 0 5px #ff0000bf;
+    font-weight: 520;
+}
+
+.container .sumCon .sen2{
+    margin : 20px;
+    font-size : 30px;
+    text-align: center;
+    letter-spacing: 16px;
+    text-shadow: 0 0 5px red;
+}
+
+.container .sumCon .cen{
+    font-size : 30px;
+    margin : 10px;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    color : darkgreen;
+    text-shadow: 0 0 5px red;
+}
+
+/* Skewing Happy Joining */
+
+.container .sumCon .cen{
+    animation: HappyJoining 1.5s ease-in-out 0.5s infinite normal forwards;
+}
+
+@keyframes HappyJoining {
+    0%{
+        transform: skewX(0deg);
+    }
+
+    100%{
+        transform-origin: top;
+        transform: skewX(25deg);
+    }
+    
+}
+
+/* Scaling Heart Plus Icon */
+.container .sumCon .cen .animation{
+    animation: HeartRaise 1.5s ease-in-out 0.5s infinite normal forwards;
+}
+
+@keyframes HeartRaise {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scaleX(120%);
+    }
+    
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        width : 650px;
+        height : 500px;
+    }
+    
+    .container .wedCon .piegons{
+        height: 160px;
+        width : 200px;
+    }
+
+    .container .wedCon .name_container{
+        margin: 25px;
+        font-size: 35px;
+        width : 250px;
+    }
+
+    .container .sumCon .sen1{
+        font-size : 15px;
+    }
+    
+    .container .sumCon .sen2{
+        margin : 10px;
+        font-size : 20px;
+    }
+    
+    .container .sumCon .cen{
+        font-size : 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        margin: 100px auto;
+        width : 600px;
+        height : 500px;
+    }
+
+    .container #shad{
+        font-size: 25px;
+    }
+    
+    .container #shad i{
+        margin : 10px;
+        font-size: 25px;
+    }
+
+    .container .sumCon{
+        margin : 30px;
+    }
+
+    .container .sumCon .sen1{
+        font-size : 17px;
+    }
+
+    .container .sumCon .sen2{
+        margin: 15px;
+        font-size : 15px;
+        font-weight : bold;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .container{
+        margin: 0 auto;
+        width : 90vw;
+        height : 100vh;
+    }
+    
+    .container .wedCon .piegons{
+        margin-top : 50px;
+        height: 180px;
+        width : 180px;
+    }
+
+    
+    .container .wedCon .name_container{
+        margin: 50px;
+        font-size: 30px;
+        width : 300px;
+    }
+
+    .container .wedCon .name_container .nC1 .qual{
+        font-size: 15px;
+    }
+
+    .container .sumCon .sen1{
+        margin : 5px;
+        font-size : 22px;
+    }
+     
+    .container .sumCon .cen{
+        margin: 15px;
+        font-size : 25px;
+    }
+
+    
+    .container .sumCon .sen2{
+        margin : 15px;
+        font-size : 20px;
+    }
+    
+}
+
+@media screen and (max-width: 530px){
+    .container{
+        margin: 0 auto;
+        width : 95vw;
+        height : 100vh;
+    }
+    
+    .container .wedCon .piegons{
+        margin : 20px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .container{
+        margin: 0 auto;
+        width : 97vw;
+        height : 100vh;
+    }
+    
+    .container .wedCon .piegons{
+        margin : 10px;
+    }
+
+    .container .wedCon .name_container{
+        font-size: 30px;
+        width : 300px;
+    }
+
+    .container .sumCon .sen1{
+        margin : 5px;
+        font-size : 20px;
+    }
+     
+    .container .sumCon .cen{
+        margin: 10px;
+        font-size : 30px;
+    }
+
+     
+    .container .sumCon .sen2{
+        margin : 10px;
+        font-size : 18px;
+    }
+
+    .container .sumCon .sen2{
+        animation: LoveVocabs 1.5s ease-in-out 0.5s infinite normal forwards;
+    }
+
+    @keyframes  LoveVocabs {
+        0%{
+            transform: scaleY(0%);
+        }
+
+        100%{
+            transform-origin: top;
+            transform: scaleY(150%);
+        }
+    }
+
+}
+
+@media screen and (max-width: 420px){
+    .container{
+        margin: 0 auto;
+        width : 97vw;
+        height : 98vh;
+    }
+    
+     .container .wedCon .piegons{
+        margin-top : 25px;
+        height: 150px;
+        width: 150px;
+    }
+
+    .container .wedCon .name_container{
+        font-size: 20px;
+        width : 220px;
+    }
+
+    .container .sumCon .sen1{
+        font-size : 18px;
+    }
+ 
+    .container .sumCon .cen{
+        font-size : 25px;
+    }
+
+    
+    .container .sumCon .sen2{
+        margin : 5px;
+        font-size : 15px;
+    }
+
+}
+
+@media screen and (max-width: 390px){
+    .container{
+        margin: 0 auto;
+        width : 100vw;
+        height : 100vh;
+    }
+    .container .sumCon .sen2{
+        margin-top: 10px;
+        font-size : 10px;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .container .wedCon .name_container{
+        font-size: 15px;
+        width : 190px;
+    }
+    .container .wedCon .name_container .nC1 .qual{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 325px){
+    .container{
+        margin: 0 auto;
+        width : 100vw;
+        height : 95vh;
+    }
+}
